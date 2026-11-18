@@ -57,6 +57,16 @@ h2{font:600 clamp(2rem,4vw,3.25rem)/1.05 'Playfair Display',serif;letter-spacing
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:17px}
 .tag{font:.66rem 'DM Mono',monospace;border:1px solid var(--line);padding:5px 8px;color:var(--olive)}
 .project-note{margin-top:20px;font-size:.8rem;color:var(--muted)}
+  .project-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 10px}
+.project-gallery figure{margin:0;min-width:0}
+.project-gallery img{display:block;width:100%;height:145px;object-fit:cover;border:1px solid var(--line);border-radius:3px;background:var(--olive2)}
+.project-gallery .wide{grid-column:1/-1}
+.project-gallery .wide img{height:205px}
+.project-gallery figcaption{font-size:.68rem;line-height:1.4;color:var(--muted);padding-top:5px}
+.project-gallery.single{grid-template-columns:1fr}
+.project-gallery.single img{height:210px}
+@media(max-width:480px){.project-gallery img{height:125px}.project-gallery .wide img{height:170px}.project-gallery.single img{height:180px}}
+
 .experience{display:grid;grid-template-columns:240px 1fr;gap:45px}
 .date{font:.7rem 'DM Mono',monospace;color:var(--olive);letter-spacing:.08em}
 .exp-title{font:600 1.45rem 'Playfair Display',serif;margin:0}
@@ -103,8 +113,30 @@ footer{padding:25px 0;color:var(--muted);font:.68rem 'DM Mono',monospace;display
 <section id="projetos">
 <div class="section-head"><div><div class="eyebrow">03 / Projetos</div><h2>Aprender fazendo.</h2></div><p class="section-intro">Projetos acadêmicos e autorais que mostram como conecto tecnologia, processos e necessidades reais.</p></div>
 <div class="cards">
-<article class="project"><div class="project-top"><span class="project-num">PROJETO 01</span><span class="status">Projeto integrador · FATEC</span></div><h3>SmartPark<br>Estacionamento Inteligente</h3><p>Solução acadêmica para monitoramento de vagas e disponibilização de dados operacionais de um estacionamento.</p><ul><li>Desenvolvimento de back-end em Python com Flask.</li><li>Estruturação de API REST para consultar ocupação, vagas e histórico.</li><li>Integração dos dados do back-end com o front-end.</li><li>Organização de informações para indicadores e acompanhamento.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">API REST</span><span class="tag">IoT</span></div></article>
-<article class="project"><div class="project-top"><span class="project-num">PROJETO 02</span><span class="status">Em concepção</span></div><h3>La Fê<br>Intelligence</h3><p>Proposta de gestão inteligente inspirada nos desafios reais de um pequeno negócio artesanal: o La Fê Ateliê.</p><ul><li>Mapeamento de necessidades de custos, precificação, estoque, produção e pedidos.</li><li>Planejamento de uma solução integrada com dados e recursos de IA como apoio à gestão.</li><li>Próximas etapas: protótipo, integrações, testes e validação.</li></ul><div class="tags"><span class="tag">IA generativa</span><span class="tag">Gestão</span><span class="tag">Dados</span><span class="tag">Automação · planejada</span></div></article>
+<article class="project"><div class="project-top"><span class="project-num">PROJETO 01</span><span class="status">Projeto integrador · FATEC</span></div><h3>SmartPark<br>Estacionamento Inteligente</h3>
+<div class="project-gallery">
+  <figure class="wide">
+    <img src="assets/smartpark-demonstracao.png" alt="Demonstração presencial do SmartPark">
+    <figcaption>Demonstração presencial da vaga instrumentada</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/smartpark-dashboard.png" alt="Dashboard do SmartPark">
+    <figcaption>Painel de indicadores</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/smartpark-sensor-maquete.png" alt="Maquete do SmartPark com sensor">
+    <figcaption>Maquete e sensor</figcaption>
+  </figure>
+</div>
+<p>Solução acadêmica para monitoramento de vagas e disponibilização de dados operacionais de um estacionamento.</p><ul><li>Desenvolvimento de back-end em Python com Flask.</li><li>Estruturação de API REST para consultar ocupação, vagas e histórico.</li><li>Integração dos dados do back-end com o front-end.</li><li>Organização de informações para indicadores e acompanhamento.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">API REST</span><span class="tag">IoT</span></div></article>
+<article class="project"><div class="project-top"><span class="project-num">PROJETO 02</span><span class="status">Em concepção</span></div><h3>La Fê<br>Intelligence</h3>
+<div class="project-gallery single">
+  <figure>
+    <img src="assets/la-fe-atelie-site.png" alt="Página inicial do site La Fê Ateliê">
+    <figcaption>Identidade visual e página da loja La Fê Ateliê</figcaption>
+  </figure>
+</div>
+<p>Proposta de gestão inteligente inspirada nos desafios reais de um pequeno negócio artesanal: o La Fê Ateliê.</p><ul><li>Mapeamento de necessidades de custos, precificação, estoque, produção e pedidos.</li><li>Planejamento de uma solução integrada com dados e recursos de IA como apoio à gestão.</li><li>Próximas etapas: protótipo, integrações, testes e validação.</li></ul><div class="tags"><span class="tag">IA generativa</span><span class="tag">Gestão</span><span class="tag">Dados</span><span class="tag">Automação · planejada</span></div></article>
 </div><p class="project-note">Nota: La Fê Intelligence está em fase de concepção. As integrações e automações são etapas planejadas, não funcionalidades já implantadas.</p>
 </section>
 <section id="competencias">
